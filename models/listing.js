@@ -19,6 +19,12 @@ const listingSchema = mongoose.Schema({
     required: true,
     min: 0,
   },
+   favoritedByUsers: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+    },
+  ],
   owner:{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',

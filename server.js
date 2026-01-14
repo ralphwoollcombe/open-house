@@ -49,6 +49,9 @@ app.get('/vip-lounge', (req, res) => {
 
 app.use('/auth', authController);
 app.use('/listings', isSignedIn, listingsController);
+//Need to investigate isSignedIn for sessions.
+// app.use('/listings', listingsController);
+
 
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);
